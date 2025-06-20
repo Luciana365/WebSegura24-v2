@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+      
+      <div id="nav"></div>     
+
+         <main>
+            <div class="main-container">
+            
+        <section class="section-content">
+           <h2>Cross-Site Request Forgery (CSRF)</h2>
+           <h3>Diferencias y consecuencias en la seguridad</h3>
+           <div id="compartir"></div>
+           <div class="content-image">
+            <img src="Imagenes/CSRF.png" alt="imagen" class="side-image">
+            <p>Cross-Site Request Forgery (CSRF), también conocido como ataque de solicitud falsificada de sitios cruzados, es un tipo de vulnerabilidad en la que un atacante engaña a un usuario autenticado para que realice acciones no deseadas en un sitio web vulnerable en el que el usuario tiene una sesión activa.</p>
+            <p>En un ataque CSRF, el atacante aprovecha la confianza establecida entre el usuario y un sitio web para enviar solicitudes HTTP maliciosas desde el navegador del usuario sin que éste sea consciente de ello. Estas solicitudes pueden incluir acciones como cambiar la contraseña de la cuenta del usuario, realizar compras no autorizadas u otras acciones que podrían causar perjuicios significativos.</p>
+            <p>El gran peligro del CSRF es que, al estar basado en la confianza que el usuario tiene en un sitio web específico, puede resultar difícil de detectar. Los perjuicios de un ataque CSRF pueden variar desde el robo de información confidencial hasta la modificación de datos importantes en aplicaciones web.</p>
+            <h3>Ejemplo de Ataque CSRF</h3>
+            <p>Supongamos que hay un usuario que tiene una cuenta en un sitio web de compras en línea y ha iniciado sesión en su cuenta, dejando la sesión activa en su navegador. El atacante crea una página web maliciosa donde incluye un formulario que realiza una acción específica en el sitio web de compras en línea que dejó abierto el usuario, por ejemplo, cambiar la dirección de envío o hacer una compra fraudulenta.</p>
+            <p>El atacante envía un enlace a la página maliciosa al usuario, aparentando que es un enlace legítimo a un sitio confiable o de interés para él, como un artículo interesante, una promoción de descuento, etc. Esto se conoce como ingeniería social.</p>
+            <p>El usuario, confiando en el aparente enlace legítimo, hace clic en él y accede a la página maliciosa creada por el atacante. La página incluye un formulario que enviará una solicitud al sitio web de compras en nombre del usuario, ya que su sesión sigue activa en el navegador.</p>
+            <p>Sin que el usuario se dé cuenta, al enviar el formulario desde la página maliciosa, se realiza una solicitud HTTP al sitio web de compras en línea con la acción deseada por el atacante, como cambiar la contraseña o realizar una compra no autorizada.</p>
+            <p>La solicitud se ejecuta con éxito en el lado del servidor del sitio web de compras en línea, ya que proviene de un usuario autenticado y con una sesión activa, por lo que el ataque de CSRF se ha llevado a cabo con éxito.</p>
+            <h3>Medidas para Prevenir CSRF</h3>
+            <ul>
+                <li><strong>Token CSRF:</strong> Utilizar tokens CSRF únicos y aleatorios en cada solicitud realizada por el usuario para verificar la legitimidad de la solicitud.</li>
+                <li><strong>Encabezados de solicitud:</strong> Configurar encabezados de solicitud como SameSite y Content-Type para prevenir solicitudes CSRF desde otros sitios web.</li>
+                <li><strong>Políticas de seguridad de origen cruzado (CORS):</strong> Implementar políticas adecuadas de CORS para limitar las solicitudes desde orígenes externos.</li>
+                <li><strong>Protección basada en referencias:</strong> Verificar la presencia de encabezados de referencia válidos para asegurar que las solicitudes provengan de páginas web legítimas.</li>
+            </ul>
+            <h3>Medidas de Seguridad para Usuarios</h3>
+            <ul>
+                <li><strong>Cerrar sesión:</strong> Cerrar sesión en sitios web después de utilizarlos, especialmente en dispositivos compartidos o públicos.</li>
+                <li><strong>No hacer clic en enlaces sospechosos:</strong> Ser cauteloso al hacer clic en enlaces de correos electrónicos, mensajes de texto o redes sociales, especialmente de remitentes desconocidos.</li>
+                <li><strong>Utilizar contraseñas seguras:</strong> Usar contraseñas fuertes y únicas para cada cuenta en línea.</li>
+                <li><strong>Utilizar una solución de gestión de contraseñas:</strong> Emplear herramientas de gestión de contraseñas para mantener las credenciales seguras.</li>
+                <li><strong>Autenticación de doble factor:</strong> Implementar la autenticación de doble factor para proteger las cuentas.</li>
+                <li><strong>Mantener el software actualizado:</strong> Mantener el navegador y otros programas actualizados con las últimas actualizaciones de seguridad.</li>
+                <li><strong>Usar extensiones de seguridad:</strong> Utilizar extensiones de seguridad en navegadores web para proteger contra ataques CSRF y otros tipos de amenazas.</li>
+            </ul>
+          </div>
+        </section>    
+         
+        </main>
+        <div id="footer"></div>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>     
+  <script src="js/botton.js" defer></script>
+ <script src="js/compartir.js" defer></script>     
+ </body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 

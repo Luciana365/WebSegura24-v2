@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+     
+      <div id="nav"></div>
+
+         <main>
+            <div class="main-container">
+            
+        <section class="section-content">
+          <h2> IDOR (La Insecure Direct Object Reference)</h2>
+          <h3>Comprendiendo las vulnerabilidades y cómo proteger tus aplicaciones</h3>
+          <div id="compartir"></div>
+           <div class="content-image">
+            <img src="Imagenes/IDOR.png" alt="imagen" class="side-image">
+            <p>La Insecure Direct Object Reference (IDOR), en español Referencias Directas Inseguras a Objetos, es una vulnerabilidad de seguridad que puede comprometer la confidencialidad e integridad de los datos en una aplicación web. En la IDOR, un atacante puede acceder directamente a recursos internos, como archivos, registros de bases de datos u otros objetos, al manipular parámetros en las solicitudes HTTP, sin la autorización adecuada. Esta vulnerabilidad puede exponer información sensible o permitir a un atacante acceder, modificar o eliminar datos críticos del sistema.</p>
+            <p>La vulnerabilidad de Insecure Direct Object Reference (IDOR) se produce cuando una aplicación web confía en el cliente para proporcionar referencias directas a objetos internos sin verificar adecuadamente los permisos de acceso del usuario. Un atacante puede aprovechar esta debilidad al modificar manualmente valores en las solicitudes HTTP, como identificadores de recursos, nombres de archivos o números de secuencia, para acceder a recursos que no le corresponden.</p>
+            <p>Un ejemplo común de IDOR es cuando una aplicación web expone URLs que contienen identificadores únicos (IDs) de recursos, como perfiles de usuario o registros de una base de datos. Si la aplicación no valida que el usuario tenga los permisos adecuados antes de acceder a esos recursos, un atacante podría cambiar el ID en la URL para acceder a información sensible de otros usuarios.</p>
+            <h3>Ejemplo de Ataque IDOR</h3>
+            <p>Imaginemos un sistema de gestión de perfiles de usuario en una aplicación web donde cada usuario tiene un identificador único y puede acceder a su perfil a través de una URL como <code>http://ejemplo.com/perfil.php?id=123</code>. Si el sistema no realiza una validación adecuada para verificar que un usuario solo pueda acceder a su propio perfil, podría ser vulnerable a un IDOR.</p>
+            <p>Para identificar esta vulnerabilidad, un atacante podría modificar manualmente el parámetro "id" en la URL con el identificador de otro usuario (por ejemplo, cambiando el <code>id=123</code> por <code>id=456</code>) y acceder al perfil de ese usuario sin permiso.</p>
+            <p>En este caso, una posible solución sería implementar un sistema de cookies y variables de sesión durante el inicio de sesión para definir la variable id y cambiar la fuente del parámetro para usar la sesión actual en lugar de la entrada directa del usuario. Teniendo en cuenta estas recomendaciones, la URL se vería así: <code>http://ejemplo.com/perfil.php?id</code>.</p>
+            <h3>Medidas para Prevenir IDOR</h3>
+            <ul>
+                <li><strong>Control de acceso efectivo:</strong> Implementar un sistema de roles y permisos en la aplicación, donde cada usuario tenga asignado un rol específico con privilegios determinados. Esto se puede lograr utilizando frameworks para autenticación y autorización basada en roles.</li>
+                <li><strong>Validación de datos:</strong> Utilizar librerías de validación de datos en el backend de la aplicación para garantizar que los datos ingresados por los usuarios cumplan con ciertos criterios de formato, longitud, tipo, etc. Un ejemplo común es utilizar expresiones regulares para validar direcciones de correo electrónico o números de teléfono.</li>
+            </ul>
+            <h3>Herramientas o Técnicas para la Validación de Datos</h3>
+            <ul>
+                <li>Para la validación de datos en el frontend, se pueden utilizar librerías como Validator.js o Yup en el desarrollo de formularios para garantizar que los datos ingresados por los usuarios sean válidos antes de enviarlos al servidor.</li>
+                <li>En el backend, se pueden implementar funciones de validación personalizadas o utilizar librerías como express-validator en aplicaciones Node.js para validar y sanitizar los datos recibidos en las solicitudes HTTP.</li>
+            </ul>
+            <h3>Concientización y Educación en Seguridad</h3>
+            <p>La concientización sobre las vulnerabilidades como IDOR contribuye a fomentar una cultura de seguridad dentro de la organización, en los desarrolladores y usuarios en general, donde la protección de los datos se convierte en una prioridad para todos los usuarios y miembros de la organización. Esto promueve la identificación proactiva y resolución de vulnerabilidades, fortaleciendo la postura de seguridad de la organización y promoviendo el cumplimiento normativo en términos de seguridad de datos.</p>
+            <p>Una base sólida de educación en seguridad desde el principio es fundamental para mantener un entorno digital seguro y confiable, evitando sanciones legales y protegiendo la reputación de la organización y el cuidado de los usuarios.</p>
+        </div>
+          </div>
+        </section>      
+        </main>
+ 
+        <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+    <script src="js/botton.js" defer></script> 
+    <script src="js/compartir.js" defer></script>
+ </body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

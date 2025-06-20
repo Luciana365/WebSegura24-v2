@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+     
+      <div id="nav"></div>
+   
+         <main>
+            <div class="main-container">
+                <section class="section-content">
+                <h2 class="títulos">Riesgos de Seguridad en Aplicaciones Web</h2>
+                 <h3 class="Subtítulos">Los 10 riesgos más comunes de OWASP y cómo protegerte de ellos</h3>
+                 <div id="compartir"></div>
+                    <div class="content-item">
+                        <img src="Imagenes/Owasp/1.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp"> Pérdida de Control de Acceso </h4>
+                        <p>La pérdida de control de acceso puede exponer información sensible, cambiar la configuración de permisos o realizar acciones fraudulentas con la cuenta de los usuarios. Las aplicaciones web deben contar con restricciones en control de acceso que permita que los usuarios no accedan a permisos no previstos. Para evitar ataques, los controles tienen que estar en el servidor o en la API, donde el atacante no puede modificar los metadatos.</p>
+                        <p>Como se menciona en el escenario 2 del informe de OWASP TOP 10 2021, si un atacante sin permiso de administrador puede acceder a la información, cambiando la ruta de acceso del lado del cliente como se muestra a continuación:</p>
+                        <p><span class="negrita">"https://example.com/app/getappInfo"</span></p>
+                        <p><span class="negrita">"https://example.com/app/admin_getappInfo"</span></p>
+                        <p>En el primer caso la información que se puede acceder es información pública y disponible, en el segundo caso (una vulnerabilidad) se puede acceder a información confidencial.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/2.jpg" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Fallas Criptográficas</h4>
+                        <p>
+                            La principal consecuencia es que se puede exponer datos confidenciales, esta exposición puede causar riesgos competitivos, comerciales, de cumplimiento, etc. Como describe el informe OWASP TOP 2021, lo primero es determinar que datos se quiere proteger, tanto en tránsito como en reposo, por ejemplo, n° de tarjeta de crédito, información personal, información comercial, principalmente si están sujetos a leyes y regulaciones de privacidad. Para prevenir este tipo de ataques, es fundamental implementar correctamente TLS (Transport Layer Security) en todas las páginas del sitio web y utilizar un cifrado fuerte. Además, es importante proteger adecuadamente las cookies de sesión y utilizar medidas de seguridad adicionales, como la autenticación de dos factores, para mitigar el riesgo de secuestro de sesión. 
+                            </p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/3.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Inyección</h4>
+                        <p>La inyección es un problema de seguridad muy frecuente en los sistemas y páginas web. En los informes de seguridad más importantes, como el OWASP Top 10, siempre aparece como uno de los riesgos principales. En el informe de 2021, también se incluyó un tipo de inyección llamado Cross-site Scripting (XSS), que permite a alguien ejecutar programas maliciosos en el navegador de un usuario.</p>
+                        <p>¿Cómo funciona este problema? Básicamente, un atacante intenta insertar código dañino en un formulario o en una URL de una página web. Esto puede hacer que la aplicación o sistema haga cosas que no debería, como robar información confidencial, cambiar datos o incluso tomar control total del sistema.</p>
+                        <p>Un ejemplo común de inyección es la inyección SQL. Esto pasa cuando alguien mete comandos maliciosos en un campo, como un formulario para buscar o ingresar datos. Si la aplicación no está bien protegida, estos comandos pueden engañar la base de datos y hacer cosas peligrosas.</p>
+                        <p>Para protegerse de estos ataques, hay varias medidas fáciles de entender. Una de ellas es usar consultas con parámetros, que consiste en separar las instrucciones del valor que se pone en ellas, evitando que el atacante pueda meter comandos peligrosos. Otra forma es escapar los datos, que significa modificar la información que entra para que los caracteres especiales no puedan ser utilizados con fines maliciosos. Por ejemplo, si alguien intenta poner una comilla simple (‘), esta se puede transformar en otra forma que no cause daño.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/4.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Diseño Inseguro</h4>
+                        <p>El diseño inseguro es un problema que se detectó en los sistemas y que tiene que ver con la forma en que están hechos desde el principio. Es decir, no solo el modo en que se implementan las cosas, sino cómo se planean y estructuran. La diferencia con otros errores es que el diseño inseguro se refiere a decisiones tomadas desde el comienzo, mientras que los errores de implementación son fallos que se pueden arreglar después.</p>
+                        <p>Este tipo de problema puede aparecer cuando un sistema no verifica bien quién está usando la aplicación, no usa medidas fuertes para proteger la información importante, o no piensa en las posibles amenazas, como los ataques para robar datos, manipular sesiones o introducir códigos maliciosos. Por ejemplo, si una página no pide que los usuarios ingresen una contraseña segura, eso es un diseño inseguro.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/5.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Configuración de Seguridad Incorrecta</h4>
+                        <p>Este problema sucede cuando una aplicación web no está configurada de manera adecuada para protegerse. Se han encontrado más de 200,000 casos en diferentes aplicaciones donde la configuración no es segura. </p>
+                        <p>Ejemplos comunes de configuración insegura incluyen usar contraseñas predeterminadas (que cualquiera puede saber), dejar abiertas puertas o accesos innecesarios (puertos) en los sistemas, o no actualizar la aplicación y sus componentes cuando hay nuevas versiones con mejoras y arreglos de seguridad. También puede suceder que los usuarios tengan acceso a información que no deberían, lo que pone en riesgo los datos confidenciales. </p>
+                        <p>Las formas de mejorar la seguridad en estos casos son simples: cambiar las contraseñas predeterminadas por otras fuertes y diferentes, mantener la aplicación y todos sus componentes siempre actualizados a las versiones más recientes, y limitar los permisos de los usuarios solo a lo que realmente necesitan. </p>
+                    </div>
+        
+                    <div class="content-imagen">
+                        <img src="Imagenes/Owasp/6.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Componentes Vulnerables y Desactualizados</h4>
+                        <p>Es una vulnerabilidad común que ocurre cuando un sistema utiliza bibliotecas, frameworks o plugins que tienen fallos de seguridad conocidos o que están desactualizados o no tienen soporte, también puede suceder que no se testeen 	la compatibilidad de las bibliotecas utilizadas que, dentro de estas dependencias, no se realice un escaneo correcto de las vulnerabilidades conocidas.</p>
+                        <p>Para reducir estas amenazas, se debe mantener un inventario de las dependencias directas e indirectas, realizar escaneos regulares, mantener los frameworks y las bibliotecas actualizadas, limitar en uso de componentes de terceros, entre otros.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/7.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Fallas de Identificación y Autenticación</h4>
+                        <p>  Estas fallas son una categoría de vulnerabilidades que se refieren a problemas relacionados con el proceso de autenticación e identificación de usuarios y la gestión de usuarios en un sistema.
+                        </p>
+                            <p>Las fallas comunes son entre varias opciones, permitir contraseñas fácilmente adivinables, no limitar los intentos de ingreso con contraseñas incorrectos, limitar los intentos de fuerza bruta, utilizar controles débiles para la restauración de contraseñas o sesiones que no expiran luego de un período de inactividad.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/8.jpeg" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Fallas en el Software y en la Integridad de los Datos</h4>
+                        <p>Esta nueva categoría se centra en los errores en el software que pueden llevar a la manipulación de datos, la actualización de software y los pipelines de CI/CD sin verificación de integridad que puede resultar en diversas consecuencias negativas, como la pérdida de confidencialidad, integridad y disponibilidad de la información.</p>
+                        <p>Una forma efectiva de minimizar la probabilidad de fallas es utilizar software original con firma digital y asegurarse que no fueron alterados, asegurar una revisión de cambios de código, eficazmente documentado, asegurarse que los datos enviados a clientes vayan cifrados, que los pipelines CI/CD tengan adecuados controles de accesos, segregación y configuración que permitan asegurar la integridad del código a través de los procesos de construcción e integración y despliegue.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/9-1.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Fallas en el Registro y Monitoreo</h4>
+                        <p>Esta falla cobra real importancia cuando no registra de manera adecuada las actividades de los usuarios, los eventos del sistema, las transacciones realizadas y los monitores entre otros.</p>
+                        <p>Esta falta de registro y monitoreo, lo que en la vulnerabilidad se conoce como brecha, puede ser aprovechada por un atacante para llevar a cabo acciones maliciosas sin ser detectado, ya que no habrá un registro de sus actividades. Además, la falta de monitoreo dificulta la detección de posibles intrusiones o comportamientos anómalos en el sistema.</p>
+                    </div>
+        
+                    <div class="content-image">
+                        <img src="Imagenes/Owasp/10-1.png" alt="imagen" class="side-imagen">
+                        <h4 class="h4-owasp">Falsificación de Solicitudes del Lado del Servidor (SSRF)</h4>
+                        <p>
+                            La Falsificación de Solicitudes del Lado del Servidor (Server-Side Request Forgery, SSRF) es una vulnerabilidad de seguridad que permite a un atacante enviar solicitudes desde un servidor hacia otros sistemas o recursos en la red interna o externa, incluso cuando está protegido por un firewall, VPN u otro sistema de control de accedo, utilizando la infraestructura del servidor como intermediario. Esto puede llevar a la exposición de información sensible, la ejecución de ataques en otros sistemas o la denegación de servicio.
+                            </p>
+                    </div>
+                </section>
+            </div>  
+        
+        </main>      
+
+<div id="footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="js/compartir.js" defer></script>
+</body>
+</html>

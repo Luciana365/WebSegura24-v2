@@ -1,0 +1,67 @@
+/* Personalización del Toast  */
+.toast {
+  background-color: #82b480; /* Cambia el color de fondo */
+  color: rgb(10, 10, 10); /* Color del texto */
+  border-radius: 10px; /* Ajusta el borde redondeado */
+  
+}
+
+.toast-body {
+  font-size: 1.1rem; /* Cambia el tamaño de la fuente */
+  
+}
+
+.toast-header {
+  background-color: #2f0d94; /* Cambia el color de fondo del encabezado */
+  color: white; /* Color del texto del encabezado */
+  font-weight: bold;
+  
+}
+/* Responsividad: para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .toast {
+    max-width: 250px; /* Reducimos el tamaño en pantallas pequeñas */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    margin: 10px; /* Espaciado para que no toque los bordes de la pantalla */
+  }
+
+  .toast-body {
+    font-size: 1rem; /* Reducimos el tamaño de la fuente en pantallas pequeñas */
+  }
+}
+
+
+/* Estilos del formulario */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 450px; /* Tamaño adecuado */
+  margin: 20px auto;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+/* Estilos de etiquetas */
+label {
+  font-weight: bold;
+}
+
+/* Inputs y textarea */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--nav-color);
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Efecto al enfocar */
+input:focus, textarea:focus {
+  border-color: var(--nav-hover-color);
+  box-shadow: 0 0 5px rgba(47, 13, 148, 0.5);
+}
+
+

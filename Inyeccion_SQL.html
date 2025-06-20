@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+      
+      <div id="nav"></div>
+
+    <main>
+        <div class="main-container">
+            
+            <section class="section-content">
+                <h2>Inyección SQL </h2>
+                <h3>Vulnerabilidades comunes y protección efectiva</h3>
+                <div id="compartir"></div>
+                <div class="content-image">
+                    <img src="Imagenes/Iyección SQL.jpeg" alt="imagen" class="side-image">
+                    <p>La Inyección SQL es una de las vulnerabilidades más comunes y peligrosas que pueden comprometer la integridad y confidencialidad de los datos almacenados en una base de datos. Para entender qué es la Inyección SQL, primero es necesario comprender qué es SQL.</p>  
+                    <p>SQL (Structured Query Language) es un lenguaje de programación utilizado para gestionar y manipular bases de datos relacionales. A través de sentencias SQL, es posible realizar operaciones de consulta, inserción, actualización y eliminación de datos en una base de datos. Sin embargo, cuando esta interfaz de consulta no se gestiona de manera segura en una aplicación web, puede dar lugar a una vulnerabilidad conocida como Inyección SQL.</p>  
+                    <p>La Inyección SQL ocurre cuando un ciberdelincuente introduce de manera maliciosa código SQL en los campos de entrada de una aplicación web, con el objetivo de alterar las consultas que se envían a la base de datos. En muchos casos, los ciberdelincuentes utilizan software automatizado para interceptar y modificar las peticiones HTTP que envía la aplicación, con el fin de explotar esta vulnerabilidad.</p>  
+                    <p>La vulnerabilidad de la Inyección SQL se ve a menudo aprovechada en el proceso de autenticación de usuarios. Esta etapa es fundamental, ya que mediante la verificación de credenciales se permite o niega el acceso a los usuarios al sistema. La debilidad radica en que, en muchos casos, los formularios de autenticación aceptan cualquier tipo de caracteres como entrada para el nombre de usuario y la contraseña. Esta falta de validación adecuada en los campos de entrada propicia que los atacantes puedan insertar código SQL malicioso, como comillas simples o comentarios, comprometiendo la estructura de las consultas SQL subyacentes y permitiéndoles eludir la autenticación de manera fraudulenta. </p>  
+                    <p>Los riesgos de estar expuesto a la Inyección SQL son significativos. Un atacante puede acceder, modificar o eliminar datos sensibles de la base de datos, obtener información confidencial, realizar acciones no autorizadas e incluso provocar daños irreparables en el sistema. Por esta razón, es fundamental que los desarrolladores implementen medidas de seguridad adecuadas, como la validación de entradas, el uso de consultas parametrizadas y la implementación de firewalls de aplicaciones web, para proteger sus aplicaciones contra este tipo de ataques.</p>  
+                    <p>En la inyección SQL simple, los atacantes aprovechan la falta de validación de entrada en formularios web para manipular consultas SQL y acceder a información sensible o realizar acciones no autorizadas en la base de datos. En el ejemplo siguiente, la vulnerabilidad radica en que la consulta SQL que se ejecuta para verificar las credenciales de inicio de sesión no filtra adecuadamente las entradas del usuario, lo que permite la inyección de código malicioso.</p>
+           
+                    <h3><strong>Paso a paso cómo se realiza una Inyección SQL simple:</strong></h3>
+                    <h4>1. Consulta SQL original</h4>
+                    <pre><code>$sql = SELECT * FROM usuarios WHERE usuario = ‘$usuario’ AND password = ‘$pass’;</code></pre>
+                    
+                    <h4>2. Entrada de usuario normal</h4>
+                    <p>Si un usuario común ingresa sus credenciales de la siguiente manera:</p>
+                    <ul>
+                        <li><strong>Usuario:</strong> "pepe"</li>
+                        <li><strong>Contraseña:</strong> "12345"</li>
+                    </ul>
+                    <p>La consulta original quedaría así:</p>
+                    <pre><code>$sql = SELECT * FROM usuarios WHERE usuario = ‘pepe’ AND password = ‘12345’;</code></pre>
+                    
+                    <h4>3. Inyección SQL realizada por un atacante</h4>
+                    <p>Un atacante podría introducir lo siguiente en el campo de la contraseña:</p>
+                    <pre><code>' OR '1' = '1</code></pre>
+                    <p>Esto modifica la consulta de la siguiente manera:</p>
+                    <pre><code>$sql = SELECT * FROM usuarios WHERE usuario = ‘pepe’ AND password = ‘12345’ OR ‘1’ = ‘1’;</code></pre>
+                    <h4>4. Efecto de la Inyección</h4>
+                    <p>Al agregar <code>OR ‘1’ = ‘1’</code> en el campo de contraseña, el atacante ha creado una condición siempre verdadera, permitiendo el acceso al sistema sin necesidad de la contraseña real.</p>
+                    <h4>Cómo evitar la Inyección SQL</h4>
+                    <p>Para mitigar los riesgos de la inyección SQL, es crucial implementar buenas prácticas de desarrollo como el escape de código y el uso de consultas preparadas.</p>
+                    
+                    <h4>Escape de código</h4>
+                    <p>Escapar el código modifica los caracteres especiales para tratarlos como texto seguro.</p>
+                    <pre><code>
+                    // Código vulnerable:
+                    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND password = '$contrasena'";
+                    
+                    // Código protegido:
+                    $usuario_esc = mysqli_real_escape_string($conexion, $usuario);
+                    $contrasena_esc = mysqli_real_escape_string($conexion, $contrasena);
+                    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario_esc' AND password = '$contrasena_esc'";
+                    </code></pre>
+                    
+                    <h4>Consultas Preparadas</h4>
+                    <p>Las consultas preparadas separan la lógica de la consulta de los datos del usuario.</p>
+                    <pre><code>
+                    // Preparar la consulta:
+                    $stmt = $pdo->prepare('SELECT * FROM usuarios WHERE usuario = :usuario AND password = :contrasena');
+                    
+                    // Vincular parámetros:
+                    $stmt->bindParam(':usuario', $usuario);
+                    $stmt->bindParam(':contrasena', $contrasena);
+                    
+                    // Ejecutar la consulta:
+                    $stmt->execute();
+                    </code></pre>
+                    <h4>Recursos Adicionales</h4>
+                    <p>Para más información sobre cómo prevenir la inyección SQL, podes consultar el siguiente video:</p>
+                    <a href="https://youtu.be/5mRZsD91z_o?si=8XqE-AVhDF9QH3ys" target="_blank">Ver Video</a>
+                                                            
+                </div>
+            </section>
+
+        
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+    <script src="js/compartir.js" defer></script>
+</body>
+</html>

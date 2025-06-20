@@ -1,0 +1,119 @@
+
+  <!DOCTYPE html>  
+  <html lang="es">  
+  <head>  
+    <script src="js/loadComponents.js" defer></script>  
+<script type="module">  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";  
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-database.js";  
+
+  const firebaseConfig = {  
+    apiKey: "AIzaSyARZD_4WFjSXZMIUeiEJOHnvgVz59UkUEA",  
+    authDomain: "websegura24-d4ddd.firebaseapp.com",  
+    projectId: "websegura24-d4ddd",  
+    storageBucket: "websegura24-d4ddd.firebasestorage.app",  
+    messagingSenderId: "702442265946",  
+    appId: "1:702442265946:web:f7751534ccfbd4d090e763",  
+    measurementId: "G-Q3CEQYEV86"  
+  };  
+
+  const app = initializeApp(firebaseConfig);  
+  const database = getDatabase(app);  
+
+  window.submitForm = function(event) {  
+    event.preventDefault();  
+
+    const name = document.getElementById("name").value.trim();  
+    const email = document.getElementById("email").value.trim();  
+    const subject = document.getElementById("subject").value.trim();  
+    const message = document.getElementById("message").value.trim();  
+
+    // Valido que ningún campo esté vacío  
+    if (!name || !email || !subject || !message) {  
+      alert('Por favor, complete todos los campos.');  
+      return;  
+    }  
+
+    // Valido el correo con regex  
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;  
+    if (!emailRegex.test(email)) {  
+      alert('Por favor, ingrese un correo electrónico válido.');  
+      return;  
+    }  
+
+    // Valido tamaño del mensaje  
+    if (subject.length < 3) {  
+      alert('El asunto debe tener al menos 3 caracteres.');  
+      return;  
+    }  
+
+    if (message.length < 5) {  
+      alert('El mensaje debe tener al menos 5 caracteres.');  
+      return;  
+    }  
+
+    // Obtengo la fecha y hora actual en formato ISO  
+    const timestamp = new Date().toISOString();  
+
+    console.log('Enviando datos a Firebase:', { name, email, subject, message, timestamp });  
+
+    // Guardar en Firebase  
+    push(ref(database, 'contactos/'), {  
+      name,  
+      email,  
+      subject,  
+      message,   
+      timestamp,   
+      read: false   
+    })  
+    .then(() => {  
+      alert('¡Gracias por tu mensaje!');  
+      document.getElementById("contactForm").reset();  
+    })  
+    .catch((error) => {  
+      console.error('Error en push de Firebase:', error.message);  
+      if (error.code) {  
+        alert(`Error con Firebase: ${error.code}`);  
+      } else {  
+        alert(`Error: ${error.message}`);  
+      }  
+    });  
+  }  
+</script>
+  </head>  
+
+  <body>  
+    <div id="nav"></div>  
+    <div class="container mt-5">  
+      <div class="w-100" style="max-width: 450px;">  
+        <h2 class="text-center mb-4">Contacto</h2>  
+        <form id="contactForm" class="p-4 shadow-sm bg-white rounded" onsubmit="submitForm(event)">  
+          <div class="mb-3">  
+            <label for="name" class="form-label">Nombre</label>  
+            <input type="text" class="form-control" id="name" name="name" required>  
+          </div>  
+
+          <div class="mb-3">  
+            <label for="email" class="form-label">Correo Electrónico</label>  
+            <input type="email" class="form-control" id="email" name="email" required>  
+          </div>  
+
+          <div class="mb-3">  
+            <label for="subject" class="form-label">Asunto</label>  
+            <input type="text" class="form-control" id="subject" name="subject" required>  
+          </div>  
+
+          <div class="mb-3">  
+            <label for="message" class="form-label">Mensaje</label>  
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>  
+          </div>  
+
+          <button type="submit" class="btn btn-primary">Enviar</button>  
+        </form>  
+      </div>  
+    </div>  
+
+    <div id="footer"></div>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
+  </body>  
+  </html>  

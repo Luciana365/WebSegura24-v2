@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+     
+      <div id="nav"></div>
+     
+         <main>
+          <div class="main-container">
+          <section class="section-content">
+            <h2>El papel de la criptografía en la Seguridad Informática </h2>
+            <h3> Protegiendo la información sensible en un mundo digital</h3>
+            <div id="compartir"></div>
+            <div class="content-image">
+              <img src="Imagenes/criptografía.jpg" alt="Imagen" class="side-image">
+              
+               <p>En el entorno digital actual, la seguridad web es un aspecto crucial para proteger la información sensible y garantizar la confianza de los usuarios en las transacciones en línea. En este contexto, la criptografía desempeña un papel fundamental al proporcionar mecanismos para proteger la confidencialidad, integridad y autenticidad de los datos transmitidos a través de Internet. </p>
+                <p>La importancia de la criptografía en la seguridad web radica en su capacidad para asegurar que la información sensible, como contraseñas, datos financieros y comunicaciones privadas, esté protegida contra accesos no autorizados y posibles ataques cibernéticos. Al utilizar técnicas criptográficas como el cifrado de datos, las firmas digitales, los certificados SSL/TLS, el hashing de contraseñas y las firmas HMAC, las organizaciones pueden garantizar la seguridad de las transmisiones en línea y proteger la privacidad de los usuarios.</p>
+                <p>La criptografía en la seguridad web también es esencial para establecer una comunicación segura entre los servidores y los clientes, evitando la interceptación de datos por parte de terceros malintencionados. Los certificados SSL/TLS permiten habilitar conexiones seguras mediante el cifrado de la información transmitida, validando la autenticidad del sitio web y protegiendo la integridad de los datos durante la comunicación.</p>
+                <p>Además, el uso adecuado de técnicas criptográficas en la seguridad web contribuye a cumplir con las normativas y estándares de seguridad, como el Reglamento General de Protección de Datos (GDPR) y las directrices de seguridad de la industria de pagos en línea (PCI DSS), que establecen requisitos estrictos para proteger la información personal y financiera de los usuarios.</p>
+                <p>Por lo dicho anteriormente, la criptografía juega un papel imprescindible en la seguridad web al proporcionar herramientas para proteger la confidencialidad, integridad y autenticidad de la información transmitida a través de Internet. Su implementación adecuada contribuye a fortalecer la ciberseguridad, preservar la privacidad de los usuarios y construir un entorno en línea confiable y seguro para todas las partes involucradas.</p>
+              </div>
+            </section>
+            <section class="section-contentt">
+            <h2>Cifrado de datos sensibles </h2>
+             <p>El cifrado de datos sensibles es crucial para proteger la información confidencial de los usuarios, como contraseñas, números de tarjetas de crédito, información personal, entre otros. Ayuda a garantizar la confidencialidad de la información al convertirla en un formato ilegible para aquellos que no tengan la clave de cifrado adecuada y contribuye a la integridad de los datos al detectar cualquier modificación no autorizada durante la transmisión o almacenamiento de la información. </p>
+            <p>El uso de claves simétricas y asimétricas en criptografía desempeña un papel fundamental para garantizar la confidencialidad y la integridad de la información transmitida.</p>
+           <p>Las claves simétricas son utilizadas para cifrar y descifrar datos de forma eficiente, ya que tanto el cifrado como el descifrado se realizan con la misma clave. Esto es muy útil para operaciones de cifrado de datos a gran escala, como la transferencia de archivos o la comunicación en tiempo real, debido a su rapidez y simplicidad de implementación.</p>
+          
+           <div class="content-imagenes">
+           <img src="Imagenes/criptografia1.png" alt="Imagen" class="side-imagenes">
+          <p>En este ejemplo simple, el cliente quiere comunicarse con el servidor, para lo cual, necesita enviarle un mensaje, que en el ejemplo se llama Hola, para cifrar el mensaje, se pasa por la llave o clave de encriptación, en este caso simétrica, porque es la misma llave o clave del lado del cliente y del servidor, acá radica una de las desventajas, porque entre cliente y servidor se comparten las claves y si alguien intercepta el mensaje, es lo mismo que tenga el mensaje en texto plano es decir, un tercero puede tener acceso a la información transmitida. El mensaje se encripta y se comparte al servidor, sin el uso de la llave, el mensaje es totalmente ilegible, el servidor utiliza la llave, descifra el mensaje y lo puede interpretar. </p>
+          <p>Por otro lado, las claves asimétricas, también conocidas como clave pública-privada, son esenciales para establecer canales de comunicación seguros y autenticados en aplicaciones web. La clave pública se comparte abiertamente para cifrar los datos, mientras que la clave privada se mantiene en secreto y se utiliza para descifrar la información. Este método garantiza la seguridad en las transmisiones, ya que solo el destinatario autorizado posee la clave privada para descifrar los datos.</p>
+           </div>        
+           
+           <div class="content-imagenes">
+           <img src="Imagenes/criptografia2.png" alt="Imagen" class="side-imagenes">
+          <p>A modo de ejemplo como se observa en la imagen, el cliente le solicita al servidor la llave pública, esta llave, es la que utiliza el cliente para encriptar el mensaje. El mensaje encriptado se comparte con el servidor. Este descifra el mensaje con su clave privada, de esta forma, para el cifrado asimétrico, se encripta con una llave y se descifra con otra, pero como dato importante, la llave que encripta del lado del cliente, y la que descifra del lado del servidor, debe ser del mismo par, es decir todo mensaje encriptado con la llave pública, se desencripta con la llave privada correspondiente.</p>
+            
+        </div>
+      </section>
+         
+         <section class="section-contentt">
+        <h2>Hashing </h2>
+        <p>En el ámbito de la criptografía, las funciones de hash desempeñan un papel fundamental en la seguridad y protección de la información. Un hash es una representación única y fija de un conjunto de datos, derivada a través de un algoritmo matemático. Estas funciones convierten datos de cualquier longitud en una cadena de caracteres de longitud fija, lo que permite resumir grandes volúmenes de información en una huella digital compacta y única.</p>
+         <p>Los hashes son utilizados para diversos propósitos en la criptografía, incluyendo la verificación de la integridad de los datos, la autenticación de información, la generación de firmas digitales y la encriptación de contraseñas, entre otros usos. Al calcular el hash de un conjunto de datos, se obtiene un valor que actúa como una especie de "sello digital", único para ese conjunto particular de información.</p>
+        <p>La seguridad de las funciones de hash radica en su propiedad de producir un resultado único para cada entrada de datos, lo que significa que incluso una pequeña modificación en los datos de entrada resultará en un hash completamente diferente. Sin embargo, es importante tener en cuenta que, aunque los hashes proporcionan una capa adicional de seguridad, no son reversibles, lo que significa que no se puede recuperar la información original a partir del hash.</p>
+        
+        <div class="content-imagenes">
+      <img src="Imagenes/hashing.png" alt="Imagen" class="side-imagenes">
+
+      <p>En el ejemplo que se proporciona de manera ilustrativa, se muestra el uso del hash, supongamos que el cliente se quiere comunicar con el servidor, el mismo primero le envía el mensaje en texto plano, en este punto se tiene que remarcar que el hash no se usa como medida confidencial, sino como medida de integridad, lo siguiente que se hace es que pasa el mensaje por un algoritmo de hash, el mensaje encriptado se envía al servidor. Este toma el texto plano, y lo pasa por el mismo algoritmo de hash que utilizo el cliente, si el mensaje coincide, quiere decir que el mensaje cumple con la propiedad de integridad. </p>
+    </div>
+  </section>
+    
+     <section class="section-contentt">
+    <h2>Cifrado de datos</h2>
+     <p>En el mundo cada vez más interconectado de las aplicaciones web, la seguridad de la información se ha vuelto un aspecto crucial a tener en cuenta. Uno de los pilares fundamentales de la seguridad en línea es la criptografía, que a su vez engloba diversas técnicas para proteger la información de accesos no autorizados. Dentro del mundo de la criptografía, las firmas digitales juegan un papel crucial en la garantía de la integridad y autenticidad de los datos transmitidos. </p>
+      <p>Es importante destacar que las firmas digitales no deben confundirse con mecanismos de encriptación para preservar la confidencialidad de los datos. Más bien, las firmas digitales se emplean para verificar la identidad del remitente y garantizar la integridad de un mensaje o documento digital, así como para evitar que el emisor pueda repudiar su contenido posteriormente. Esta capacidad de proveer integridad y autenticación en las comunicaciones digitales es esencial para mantener la confianza en las transacciones en línea y proteger la información sensible de posibles manipulaciones o falsificaciones.</p>
+      <p>Las firmas digitales son un método criptográfico utilizado para verificar la autenticidad e integridad de un mensaje o documento digital, así como para garantizar la no repudiación de su origen. Su funcionamiento se basa en el uso de un par de claves asimétricas, una clave privada y una clave pública, que están matemáticamente relacionadas, pero operan de manera diferente.</p>
+       <p>El emisor del mensaje o documento primero genera un par de claves asimétricas: una clave privada y una clave pública. La clave privada se mantiene en secreto y se utiliza para firmar digitalmente el mensaje, mientras que la clave pública se comparte con otros usuarios para verificar la firma.</p>
+      <p>Para firmar un mensaje, el emisor aplica primero un algoritmo de hash al contenido del mensaje para producir un resumen único y fijo del mismo. Este resumen se cifra con la clave privada del emisor para crear la firma digital.</p>
+    
+      
+    <div class="content-imagenes">
+      <img src="Imagenes/firma digital.png" alt="Imagen" class="side-imagenes">
+      <p>El receptor del mensaje recibe la firma digital junto con el mensaje y la clave pública del emisor. Para comprobar la autenticidad e integridad del mensaje, el receptor aplica el mismo algoritmo de hash al contenido del mensaje para obtener un resumen. Luego, utiliza la clave pública del emisor para descifrar la firma digital y obtener el resumen cifrado anteriormente.</p> <p>Si los resúmenes coinciden, esto significa que el mensaje no ha sido alterado y que la firma ha sido generada con la clave privada correspondiente. Esto proporciona la verificación de la autenticidad y la integridad del mensaje, ya que solo el emisor, que posee la clave privada, podría haber generado esa firma específica.</p>
+    </div>
+  </section>
+</div>
+</main>
+  
+  <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="js/compartir.js" defer></script>
+</body> 
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+      
+      <div id="nav"></div>
+      <div id="header"></div>
+  
+      <main>
+          <div class="main-container">
+              <section class="section-content">
+                  <h2>Glosario</h2>
+                  <h4>Haz clic en la palabra para ver su significado</h4>
+                  <div id="compartir"></div>
+                  <input type="text" id="search" placeholder="Buscar término...">  
+                  
+                  <ul id="glosario">
+                    <li class="glosario-item">
+                        <span class="term">Activación</span>
+                        <div class="definicion">Momento en el que el virus se activa y comienza a ejecutar su función maliciosa, como la destrucción de archivos, el robo de información o la alteración del sistema.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Actualización de software</span>
+                        <div class="definicion">Práctica de mantener el software y las aplicaciones al día con los últimos parches de seguridad para corregir vulnerabilidades conocidas y prevenir posibles ataques de troyanos y otros tipos de malware.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Adware</span>
+                        <div class="definicion">Tipo de amenaza que muestra anuncios publicitarios no deseados en un dispositivo sin el consentimiento del usuario. A menudo, el adware se instala en un dispositivo junto con otro software descargado, y una vez instalado, comienza a mostrar anuncios intrusivos, como ventanas emergentes, banners en páginas web e incluso cambios en la configuración del navegador.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">API (Interfaz de Programación de Aplicaciones)</span>
+                        <div class="definicion">Es un conjunto de reglas y protocolos que permite que dos softwares se comuniquen entre sí. Se utilizan para integrar funcionalidades.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Atacante</span>
+                        <div class="definicion">Persona o entidad que lleva a cabo acciones maliciosas con el objetivo de vulnerar la seguridad de sistemas o personas.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ataque de intercepción de cookies</span>
+                        <div class="definicion">Ataque en el que un atacante obtiene y utiliza las cookies de una víctima para hacerse pasar por ella en un sitio web.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ataques de Inyección SQL</span>
+                        <div class="definicion">Técnica de ataque que aprovecha las vulnerabilidades de seguridad en aplicaciones web para insertar comandos SQL maliciosos en las consultas de base de datos enviadas al servidor, con el objetivo de acceder a información confidencial, modificar datos o incluso eliminar registros.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ataque de suplantación de sesión</span>
+                        <div class="definicion">Tipo de ataque en el que un atacante roba o utiliza la sesión de un usuario autenticado para realizar acciones en su nombre.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Auditoría de código</span>
+                        <div class="definicion">Proceso de revisión exhaustiva del código fuente de una aplicación para identificar posibles vulnerabilidades y asegurar que cumple con las normas de seguridad.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Autenticación</span>
+                        <div class="definicion">Proceso de verificar la identidad de un usuario antes de permitir el acceso a un sistema.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Autenticación de dos factores (2FA)</span>
+                        <div class="definicion">Método de seguridad que requiere dos formas de verificación para confirmar la identidad de un usuario, generalmente algo que sabe (contraseña) y algo que posee (código de autenticación).</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Autenticidad del remitente</span>
+                        <div class="definicion">Verificación de que el remitente de un correo electrónico o mensaje es realmente quien dice ser, mediante la comprobación de la dirección de correo electrónico, los detalles de contacto y otros elementos de identificación.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Auto-replicación</span>
+                        <div class="definicion">Capacidad de un virus informático para copiarse a sí mismo en otros archivos o sistemas, propagándose de forma automática sin necesidad de intervención humana.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ataques de ingeniería social</span>
+                        <div class="definicion">Estrategias utilizadas por los ciberdelincuentes para manipular psicológicamente a las personas y engañarlas, con el objetivo de obtener información confidencial.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Biblioteca</span>
+                        <div class="definicion">Conjunto de funciones, clases y rutinas predefinidas que se pueden utilizar para realizar tareas específicas en un programa. Un ejemplo clásico es la biblioteca de CSS, que se usa para facilitar el desarrollo y mejorar la apariencia y funcionalidad de tus proyectos web.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">CI/CD</span>
+                        <div class="definicion">Se refiere a un aspecto específico dentro del proceso de desarrollo de software conocido como Integración Continua y Despliegue Continuo (CI/CD por sus siglas en inglés).</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Cookie</span>
+                        <div class="definicion">Son pequeños archivos de texto que los sitios web envían al navegador del usuario y se almacenan en un dispositivo y se utilizan para recopilar información sobre la actividad del usuario en el sitio web, como sus preferencias, datos de inicio de sesión, historial de navegación y otra información relevante.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Back-end</span>
+                        <div class="definicion">Parte del sistema que está detrás de escena y que los usuarios finales no ven directamente. Generalmente consiste en tecnologías como servidores web, sistemas de gestión de bases de datos (como MySQL, PostgreSQL, MongoDB), lenguajes de programación del lado del servidor (como Python con Django, Ruby con Ruby on Rails, Java con Spring, PHP con Laravel, entre otros) y frameworks de desarrollo.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Cabeceras HTTP (Headers)</span>
+                        <div class="definicion">Proporcionan información adicional sobre la solicitud, como el tipo de contenido aceptado, las cookies, la longitud del cuerpo de la solicitud, entre otros.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Campo de búsqueda sin filtrar</span>
+                        <div class="definicion">Es un campo de entrada donde los usuarios pueden introducir texto para buscar información en un sitio web, sin que se haya implementado ninguna validación o sanitización de los datos ingresados.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Capacitación en seguridad cibernética</span>
+                        <div class="definicion">Proceso de formación y enseñanza destinado a educar a los usuarios sobre los riesgos en línea, las mejores prácticas de seguridad y cómo reconocer y responder a posibles amenazas.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Carga útil (Payload)</span>
+                        <div class="definicion">La carga útil es la parte de un malware que realiza las acciones maliciosas una vez que ha infectado un sistema. Puede incluir funciones como la recolección y filtración de datos, la creación de puertas traseras, la propagación a otros dispositivos, el cifrado de archivos o cualquier otra actividad diseñada por el atacante. La carga útil es la parte activa del malware que busca causar daño o recopilar información sin el conocimiento del usuario.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ciberdelincuencia</span>
+                        <div class="definicion">Actividades ilícitas realizadas en el entorno digital, como el phishing, el malware, el ransomware y otros tipos de ataques informáticos.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Ciberseguridad</span>
+                        <div class="definicion">Conjunto de medidas y prácticas destinadas a proteger sistemas informáticos, redes y datos contra ataques cibernéticos, como el phishing y el robo de información.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Cifrado</span>
+                        <div class="definicion">Proceso de convertir datos en un código secreto para proteger su confidencialidad.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Clave privada</span>
+                        <div class="definicion">Información que se mantiene en secreto y se utiliza para descifrar mensajes cifrados o para firmar digitalmente. Complementa a la clave pública en sistemas de criptografía asimétrica.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Clave pública</span>
+                        <div class="definicion">Información que se comparte libremente y se utiliza para cifrar mensajes o verificar firmas digitales. Es parte de un par de claves utilizado en criptografía asimétrica.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Contraseñas seguras</span>
+                        <div class="definicion">Combinaciones de letras, números y caracteres especiales que se utilizan para proteger el acceso a cuentas y dispositivos. Las contraseñas seguras son difíciles de adivinar y deben ser únicas para cada cuenta.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Control de Acceso</span>
+                        <div class="definicion">Sistema que regula quién puede acceder a qué información dentro de una organización.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Cookies de sesión</span>
+                        <div class="definicion">Son pequeños fragmentos de datos almacenados en el navegador de un usuario que se utilizan para mantener la sesión activa en un sitio web, permitiendo al usuario navegar sin necesidad de volver a autenticarse en cada página.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Copias de seguridad</span>
+                        <div class="definicion">Archivos duplicados guardados en un lugar seguro para restaurar datos en caso de pérdida.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Criptografía</span>
+                        <div class="definicion">La criptografía es una técnica utilizada para proteger la información transmitida a través de internet mediante el uso de algoritmos matemáticos que convierten los datos en un formato ilegible para aquellos que no poseen la clave de descifrado. La criptografía se utiliza en aplicaciones web para garantizar la confidencialidad, integridad y autenticidad de la información transmitida entre el cliente y el servidor. Esto ayuda a prevenir el robo de información sensible, como contraseñas o datos personales, por parte de hackers.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Criptografía asimétrica</span>
+                        <div class="definicion">Tipo de criptografía que utiliza un par de claves, pública y privada, para cifrar y descifrar información, garantizando la autenticidad y confidencialidad de los mensajes.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Criptografía simétrica</span>
+                        <div class="definicion">Tipo de criptografía en la que se utiliza la misma clave tanto para cifrar como para descifrar un mensaje.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Cross-Site Request Forgery (CSRF)</span>
+                        <div class="definicion">Ataque en el que un atacante engaña a un usuario autenticado para que ejecute acciones no deseadas en un sitio web al aprovechar su sesión activa.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Cross-Site Scripting (XSS)</span>
+                        <div class="definicion">Es un tipo de vulnerabilidad de seguridad informática que permite a un atacante ejecutar scripts maliciosos en la máquina del usuario dentro de un sitio web en el que confía.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Cryptoransomware</span>
+                        <div class="definicion">Tipo de ransomware que codifica archivos para hacerlos inaccesibles.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">CSRF token</span>
+                        <div class="definicion">Valor único generado y asociado a una sesión de usuario para prevenir ataques de CSRF al validar las solicitudes del cliente.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Datos Sensibles</span>
+                        <div class="definicion">Información que requiere un nivel superior de protección debido a su sensibilidad y riesgo potencial en caso de divulgación no autorizada.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Descifrado</span>
+                        <div class="definicion">Proceso de revertir el cifrado para convertir un mensaje cifrado en su forma original, legible, utilizando la clave correspondiente.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Delimitar valores</span>
+                        <div class="definicion">Técnica que consiste en encerrar los valores de consulta dentro de comillas simples o dobles en SQL para evitar ambigüedades y proteger contra la inyección SQL.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Deserialización segura</span>
+                        <div class="definicion">Prácticas y medidas para mitigar los riesgos de seguridad asociados con la deserialización de datos, como la validación estricta y el uso de formatos seguros.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Desinfección</span>
+                        <div class="definicion">Proceso de eliminación de malware de un dispositivo comprometido.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Dispositivo Android</span>
+                        <div class="definicion">Sistema operativo desarrollado por Google para dispositivos móviles y tablets.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Empaquetado de código</span>
+                        <div class="definicion">Proceso mediante el cual se comprime y cifra el código de un programa en un archivo protegido, con el fin de reducir su tamaño y protegerlo contra accesos no autorizados, modificación o robo del código fuente.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Encriptación</span>
+                        <div class="definicion">Proceso de codificación de datos para proteger su confidencialidad.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Escapar caracteres</span>
+                        <div class="definicion">Proceso de codificación de caracteres especiales dentro de una cadena de consulta SQL para evitar la interpretación errónea de comandos y prevenir la inyección SQL.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Explotar</span>
+                        <div class="definicion">Aprovechar una vulnerabilidad en un sistema para obtener acceso no autorizado o causar daño.</div>
+                    </li>
+                    <li class="glosario-item">
+                        <span class="term">Fireball</span>
+                        <div class="definicion">Tipo de adware que fue diseñado para controlar los motores de búsqueda predeterminados de los navegadores y manipular los resultados de las búsquedas para dirigir a los usuarios a páginas web maliciosas con el fin de generar ingresos a los ciberdelincuentes detrás de la amenaza.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Firma digital</span>
+                        <div class="definicion">Método criptográfico para garantizar la autenticidad, integridad y el no repudio de un mensaje o documento.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Framework</span>
+                        <div class="definicion">Conjunto de herramientas para el desarrollo de aplicaciones de software, incluyendo patrones de diseño, convenciones de desarrollo y componentes reutilizables.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Front-end</span>
+                        <div class="definicion">Parte de la aplicación que los usuarios interactúan directamente. Generalmente incluye tecnologías como HTML (HyperText Markup Language) para la estructura, CSS (Cascading Style Sheets) para el diseño y la presentación, y JavaScript para la interactividad y la manipulación dinámica del contenido.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Fuga de Información</span>
+                        <div class="definicion">La divulgación no autorizada de información confidencial o sensible a personas no autorizadas.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Funcionalidades Maliciosas</span>
+                        <div class="definicion">Actividades peligrosas que pueden llevar a cabo los troyanos, como robo de información, espionaje, control remoto del dispositivo, entre otros.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Gusano informático</span>
+                        <div class="definicion">Es un tipo de malware diseñado para replicarse y propagarse de un dispositivo a otro, sin necesidad de intervención humana.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Hash</span>
+                        <div class="definicion">Función matemática que convierte datos de cualquier tamaño en una cadena de longitud fija. Se utiliza para resumir y proteger la integridad de la información, ya que cualquier cambio en los datos resulta en un hash completamente diferente.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Identificadores Únicos (IDs)</span>
+                        <div class="definicion">Código o valor único asignado a un objeto o entidad dentro de una aplicación para facilitar su identificación y realizar operaciones específicas sobre él.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Incidente de seguridad</span>
+                        <div class="definicion">Evento que compromete la confidencialidad, integridad o disponibilidad de la información.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Infección</span>
+                        <div class="definicion">Fase en la que el virus informático entra en un sistema y se propaga, aprovechando vulnerabilidades y métodos de auto-replicación para infectar archivos y otros sistemas.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Inyección SQL</span>
+                        <div class="definicion">Método de ataque en el que se insertan comandos SQL maliciosos en las entradas de un formulario web para obtener acceso no autorizado a la base de datos.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Librerías</span>
+                        <div class="definicion">Conjuntos de funciones predefinidas y código reutilizable que facilitan el desarrollo de aplicaciones al proporcionar herramientas y utilidades listas para usar.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Malware</span>
+                        <div class="definicion">Abreviatura de "malicious software", se refiere a software malicioso diseñado para dañar, robar información o interferir con los sistemas informáticos de una organización o usuario.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Medidas de seguridad</span>
+                        <div class="definicion">Herramientas y prácticas utilizadas para proteger dispositivos y datos contra amenazas cibernéticas.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Medidas preventivas</span>
+                        <div class="definicion">Acciones tomadas para evitar la infección por malware y proteger los datos.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Metadatos</span>
+                        <div class="definicion">En el contexto de la seguridad informática y el control de acceso, los metadatos son información adicional que describe otros datos. En el caso de la seguridad y el control de acceso, los metadatos pueden incluir información sobre los permisos de acceso, roles de usuario, políticas de seguridad, información de autenticación, entre otros.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Método HTTP</span>
+                        <div class="definicion">Indica la acción que se debe realizar en el servidor. Algunos métodos comunes son GET (para solicitar recursos), POST (para enviar datos al servidor), PUT (para modificar recursos), DELETE (para eliminar recursos), entre otros.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">No repudio</span>
+                        <div class="definicion">Se refiere a la imposibilidad de negar una acción, comunicación o transacción realizada, asegurando la autenticidad y validez de la misma en el ámbito de la seguridad y la criptografía.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Ofuscación de código</span>
+                        <div class="definicion">Es una técnica utilizada en el área de la ciberseguridad para dificultar la comprensión del código fuente de un programa o aplicación, haciéndolo más complejo y confuso para los humanos, pero manteniendo su funcionalidad para las máquinas.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">OWASP</span>
+                        <div class="definicion">Open Web Application Security Project. Proyecto abierto de seguridad en aplicaciones web, es una asociación sin fines de lucro que busca que las organizaciones encargadas de desarrollar aplicaciones web, APIs, etc., sean seguras.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Parámetros en las Solicitudes HTTP</span>
+                        <div class="definicion">Son información adicional que se envía al servidor junto con la solicitud. Estos parámetros suelen ir incluidos en la URL (en el caso de los métodos GET) o en el cuerpo de la solicitud (en el caso de los métodos POST y otros). Los parámetros pueden tener diferentes propósitos, como enviar datos de un formulario, identificar recursos específicos, autenticar usuarios, entre otros.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Parche</span>
+                        <div class="definicion">Término informático que se refiere a la acción de corregir o solucionar una vulnerabilidad o fallo de seguridad en un sistema informático mediante la instalación de un parche o actualización. Este proceso consiste en modificar el software existente para corregir el error y evitar que los ciberdelincuentes puedan aprovecharse de él para llevar a cabo un ataque. Por lo tanto, parchear una vulnerabilidad es fundamental para mantener la seguridad de los sistemas y proteger la información de posibles amenazas cibernéticas.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Phishing</span>
+                        <div class="definicion">Técnica de fraude en línea que consiste en engañar a los usuarios para que revelen información confidencial, como contraseñas o datos financieros, simulando ser una entidad o persona de confianza.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Pipeline de CI/CD</span>
+                        <div class="definicion">En el contexto de desarrollo de software se refiere a una serie automatizada de pasos o procesos que se ejecutan secuencialmente para llevar a cabo diferentes tareas relacionadas con la construcción, prueba y despliegue de un software. El objetivo principal de un pipeline es automatizar y estandarizar el proceso de desarrollo y despliegue de software, lo que ayuda a mejorar la eficiencia, la calidad y la velocidad del ciclo de vida del desarrollo. Los pipelines de CI/CD son conjuntos automatizados de procesos que permiten a los equipos de desarrollo construir, probar y desplegar código de manera eficiente y frecuente. Estos pipelines suelen estar compuestos por diferentes etapas, como la compilación del código, pruebas automatizadas, análisis de seguridad, y despliegue en entornos de producción o de prueba.</div>
+                    </li>
+                    
+                    <li class="glosario-item">
+                        <span class="term">Plugins</span>
+                        <div class="definicion">Son complementos o extensiones.
+                  </li>
+
+                  <li class="glosario-item">
+                    <span class="term">Polimorfismo</span>
+                    <div class="definicion">Capacidad de un virus informático para cambiar su estructura y comportamiento cada vez que se replica, dificultando su detección basada en patrones.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Privacidad de los usuarios</span>
+                    <div class="definicion">Derecho de los individuos a controlar el acceso y uso de su información personal.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Privilegios mínimos</span>
+                    <div class="definicion">Práctica de asignar al usuario de la base de datos solo los permisos necesarios para realizar sus funciones, evitando el uso de un usuario con excesivos privilegios como el root.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Propagación</span>
+                    <div class="definicion">Proceso mediante el cual el virus se difunde a través de diferentes medios, como correos electrónicos, redes compartidas, dispositivos USB u otros vectores de infección.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Programación segura</span>
+                    <div class="definicion">Práctica de desarrollar código de forma segura siguiendo buenas prácticas de programación para prevenir vulnerabilidades y ataques, como la inyección SQL.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Puerta trasera (Backdoor)</span>
+                    <div class="definicion">Una puerta trasera es una vulnerabilidad intencionada creada por un desarrollador de software para permitir el acceso al sistema sin seguir los procedimientos de autenticación habituales. Las puertas traseras pueden ser utilizadas por ciberdelincuentes para entrar de manera ilegítima en un sistema y llevar a cabo actividades maliciosas, como robar información confidencial, instalar otros tipos de malware o controlar el sistema de forma remota.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Ransomware</span>
+                    <div class="definicion">Tipo de malware que bloquea el acceso a archivos o dispositivos y exige un rescate para restaurar el acceso.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Red de intercambio de archivos P2P</span>
+                    <div class="definicion">Siglas de "Peer to Peer" en inglés, se refiere a una red descentralizada en la que los usuarios comparten archivos directamente entre sí.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Respuesta rápida</span>
+                    <div class="definicion">Acciones inmediatas tomadas ante una infección por un malware para minimizar los daños.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Rootkit</span>
+                    <div class="definicion">Programa malicioso que se oculta en el sistema operativo para permitir que otros programas maliciosos evadan las medidas de seguridad y se mantengan ocultos.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Sanitización de datos</span>
+                    <div class="definicion">Técnica para eliminar o neutralizar potencial código malicioso presente en los datos ingresados por un usuario antes de ser utilizados por la aplicación.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Serialización</span>
+                    <div class="definicion">Proceso de convertir datos estructurados en un formato que pueda ser almacenado o transmitido, como en archivos o redes.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Software Antivirus</span>
+                    <div class="definicion">Programa diseñado para detectar, prevenir y eliminar amenazas de malware, incluyendo troyanos, protegiendo así los dispositivos contra posibles ataques.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Software de bloqueo de anuncios</span>
+                    <div class="definicion">Programas diseñados para bloquear anuncios emergentes y anuncios maliciosos que pueden contener malware.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Solicitud HTTP</span>
+                    <div class="definicion">Es un mensaje que un cliente (como un navegador web) envía a un servidor para solicitar un recurso web, como una página HTML, una imagen, un archivo CSS, etc.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Suplantación de Identidad</span>
+                    <div class="definicion">Acción llevada a cabo por algunos troyanos para hacerse pasar por usuarios legítimos u organismos confiables con el objetivo de engañar a las víctimas.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Spyware</span>
+                    <div class="definicion">Tipo de software malicioso diseñado para recopilar información sobre las actividades de un usuario en su dispositivo sin su conocimiento o consentimiento. Este software espía puede monitorear y registrar acciones como la navegación en Internet, el uso de aplicaciones, contraseñas, información financiera y otros datos personales sensibles.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">TLS (Transport Layer Security)</span>
+                    <div class="definicion">Es un protocolo de seguridad que se utiliza para garantizar la privacidad y la integridad de la información transmitida a través de internet. TLS es la evolución de su predecesor, SSL (Secure Sockets Layer), y se utiliza para establecer conexiones seguras entre un cliente (como un navegador web) y un servidor.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Troyano</span>
+                    <div class="definicion">Programa malicioso diseñado para engañar a los usuarios haciéndose pasar por software legítimo, con el fin de realizar acciones maliciosas en el sistema infectado.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">URL (Uniform Resource Locator)</span>
+                    <div class="definicion">Dirección única que identifica la ubicación de un recurso en internet, como una página web, un archivo o una imagen.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Validación de datos</span>
+                    <div class="definicion">Proceso de verificar y validar los datos de entrada proporcionados por el usuario para asegurarse de que cumplen con el formato y los criterios esperados.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Validación de entrada</span>
+                    <div class="definicion">Proceso de asegurarse de que los datos ingresados por un usuario cumplan con ciertos criterios, como longitud adecuada, formato correcto, entre otros, antes de ser procesados.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Virus informático</span>
+                    <div class="definicion">Programa malicioso que se replica y se propaga a través de archivos y programas.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">VPN (Virtual Private Network)</span>
+                    <div class="definicion">Una red privada virtual que protege la privacidad y la seguridad de los datos al cifrar la conexión a internet y ocultar la dirección IP del usuario.</div>
+                </li>
+                
+                <li class="glosario-item">
+                    <span class="term">Vulnerabilidad de día cero</span>
+                    <div class="definicion">Vulnerabilidad de seguridad desconocida y sin parche disponible.</div>
+                </li>
+              
+                  </ul>
+              </section>
+          </div>
+      </main>
+  
+      <div id="footer"></div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      
+      <script>  
+        document.querySelectorAll('.glosario-item').forEach(function(item) {  
+            item.addEventListener('click', function() {  
+                const definicion = this.querySelector('.definicion');  
+                definicion.style.display = (definicion.style.display === 'none' || definicion.style.display === '') ? 'block' : 'none';  
+            });  
+        });  
+
+        // Función de búsqueda  
+        document.getElementById('search').addEventListener('input', function() {  
+            const filter = this.value.toLowerCase();  
+            const items = document.querySelectorAll('.glosario-item');  
+
+            items.forEach(function(item) {  
+                const term = item.querySelector('.term').textContent.toLowerCase();  
+                if (term.includes(filter)) {  
+                    item.style.display = '';  
+                } else {  
+                    item.style.display = 'none';  
+                }  
+            });  
+        });  
+    </script>  
+    <script src="js/compartir.js" defer></script>
+</body>  
+</html>  

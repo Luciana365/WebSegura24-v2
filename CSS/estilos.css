@@ -1,0 +1,182 @@
+/*Estilos para el cuadro de +información y tips*/
+.tips-container p {
+  display: block; /* Asegura que los párrafos dentro del cuadro de tips se muestren en dispositivos móviles */
+}
+
+/*Estilos imágenes de Cifrado de Datos*/
+.side-imagenes{
+width: 400px; /* Aumentar el ancho de la imagen */
+height: auto;
+
+}
+
+/* Estilos para los cuadros de información y tips */
+.info-container, .tips-container {
+font-family: var(--font-family-Roboto);
+/*font-size: 16px;*/
+display: none; /* Oculta los contenedores por defecto */
+background-color:#d7f2d6; /* Color de fondo común */
+border: 1px solid #ccc;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px; /* Aumenta el padding para más espacio */
+margin-top: 10px;/* Espacio vertical superior para separar los botones de otros elementos */
+border-radius: 8px;/* Esquinas redondeadas*/
+}
+
+/* Estilos  para el cuadro(contenedor) de tips */
+.tips-container {
+background-color: #d7f2d6; /* Color de fondo específico */
+max-width: 950px; /* Ancho máximo específico */
+}
+
+/* Estilos  para el cuadro (contenedor) de información */
+.info-container {
+max-width: 950px; /* Ancho máximo específico */
+}
+
+/* Estilos responsivos para los cuadros (contenedores) */
+@media (max-width: 768px) {
+.info-container, .tips-container {
+max-width: 100%; /* Ajusta el ancho máximo de los contenedores a la pantalla */
+}
+}
+
+/* Estilos comunes para los botones */
+.info-button, .tips-button {
+font-size: 16px;
+margin-top: 10px;
+background-color: var(--nav-color); /* Color de fondo del botón */
+color: white;
+border: none;
+padding: 12px 20px; /* Aumenta el padding para hacer el botón más grande */
+border-radius: 4px;
+cursor: pointer;/* Cambio visual al pasar el ratón, indica que es un elemento clickeable (interactivo) */
+}
+
+/* Estilos  para el hover de los botones */
+.info-button:hover, .tips-button:hover {
+background-color: var(--nav-hover-color); /* Color de fondo del botón al hacer hover */
+}
+
+/* Estilos para el botón de cierre (X) */
+.close-btn {
+  font-size: 30px;
+  font-weight: bold; /* Negrita */
+  color: #333;
+ 
+}
+
+
+/*Estilos para Iyección SQL*/
+pre code {
+background-color: #f4f4f4;
+padding: 10px;
+border-radius: 5px;
+display: block;
+margin: 10px 0;
+}
+
+
+h4 {
+color:var(--text-color);
+font-size: 1.25em;
+}
+
+/* Estilos para cuadros comparativos (tablas)*/
+
+
+.comparativo-tabla {
+width: 100%;
+border-collapse: collapse;
+overflow-x: auto;
+display: block; /* Hace que la tabla sea desplazable */
+max-width: 100%; /* Evita desbordamiento */
+
+}
+
+.comparativo-tabla th, .comparativo-tabla td {
+font-family: var(--font-family-Roboto);
+border: 1px solid #000;
+padding: 8px;
+text-align: center;
+
+}
+
+.comparativo-tabla th {
+font-weight: bold;
+background-color: #d2efbc;
+}
+
+.td-color {
+font-weight: bold;
+background-color: #d2efbc;
+}
+
+
+
+/* Estilos para las tarjetas */
+.comparativo-tarjetas {
+display: none; /* Oculta las tarjetas */
+}
+
+.tarjetas {
+border: 1px solid #000;
+margin-bottom: 10px;
+border-radius: 8px;
+padding: 10px;
+background-color: #fff;
+}
+
+.tarjetas-header {
+font-weight: bold;
+background-color: #d2efbc;
+padding: 8px;
+border-radius: 8px 8px 0 0;
+}
+
+.tarjetas-body {
+padding: 8px;
+}
+
+/* Estilos responsivos para el cuadro cuando se convierte en tarjetas */
+@media (max-width: 768px){
+.comparativo-tabla {
+  display: none;
+}
+
+.comparativo-tarjetas {
+  display: block;
+}
+}
+
+@media (min-width: 768px) {
+.comparativo-tarjetas {
+  display: none;
+}
+}
+
+
+
+
+/*Glosario*/
+.term{
+font-family: var(--font-family-Roboto);
+color:var(--header-color)
+}
+.glosario-item {
+margin-bottom: 10px;
+cursor: pointer;
+}
+.definicion {
+display: none;
+margin-top: 5px;
+padding: 5px;
+border-left: 2px solid #ccc;
+}
+.hidden {
+display: none;
+}
+
+
+
+

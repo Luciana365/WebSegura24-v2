@@ -1,0 +1,121 @@
+/* Estilos para el pie de página */
+footer {
+  background-color: #2f0d94; /* Color de fondo del pie de página */
+  padding: 10px 0; /* Relleno superior e inferior */
+  text-align: center; /* Centra el contenido del pie de página */
+  color: white; /* Color del texto */
+  width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+  scroll-behavior: smooth;
+}
+
+.footer-container {
+  display: flex; /* Utilizo flexbox para alinear los elementos */
+  flex-direction: column; /* Cambia la dirección a columna para alinear verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+.footer-icons {
+  display: flex; /* Utilizo flexbox para alinear los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+.icon-example {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimino el subrayado de los enlaces */
+  font-size: 1.5em; /* Tamaño de fuente de los enlaces */
+  transition: color 0.3s; /* Transición suave para el cambio de color */
+  margin: 0 10px; /* Espacio entre los enlaces */
+}
+
+.icon-example:hover {
+  color: #797fa5; /* Color de los enlaces al pasar el cursor */
+}
+
+.texto-footer {
+  margin-top: 10px; /* Margen superior */
+  font-size: 1.2em; /* Tamaño de fuente */
+  color: #faf3f3; /* Color  */
+  text-align: center; /* esté centrado */
+  
+}
+.texto{  
+  margin: 2px; /* Espaciado*/ 
+  text-align: center; /* Alinea texto al centro dentro de cada columna */  
+} 
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px 0; /* Reduce el padding en pantallas más pequeñas */
+  }
+  
+  .footer-container {
+    flex-direction: column; /* Cambiar la dirección del flex a columna en pantallas pequeñas */
+    gap: 10px; /* Reducir el espacio entre los elementos */
+    padding: 10px 0; /* Reducir el padding interno */
+  }
+
+  .footer-icons {
+    flex-direction: row; /* Asegura que los iconos estén alineados en fila */
+    gap: 10px; /* Reducir el espacio entre iconos */
+  }
+
+  .icon-example {
+    font-size: 1.2em; /* Reducir el tamaño de los iconos en pantallas pequeñas */
+  }
+
+  .parrafo-footer{
+    font-size: 14px;
+    margin: 10px;
+
+  }
+  .texto-footer{
+    font-size: 12px;
+  }
+}
+
+/* Contenedor donde se inyecta el contenido de compartir */
+#compartir {
+  margin-bottom: 1em; /* Solo espacio debajo del bloque */
+}
+
+/* Contenedor de los íconos de redes sociales */
+.compartir {
+  display: flex;               /* Alinea los íconos en fila horizontal */
+  align-items: center;         /* Centra los íconos verticalmente */
+  justify-content: flex-end;   /* Alinea los íconos a la derecha */
+  gap: 12px;                   /* Espacio entre íconos */
+  flex-wrap: nowrap;           /* No permite que se apilen en varias filas */
+}
+
+/* Estilos para los íconos */
+.compartir a {
+  color: rgb(51, 18, 167);     /* Color base del ícono */
+  font-size: 1.3em;            /* Tamaño del ícono */
+  text-decoration: none;      /* Elimina subrayado */
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover */
+.compartir a:hover {
+  color: #bfc8ff;
+  transform: scale(1.1);
+}
+
+/* Estilo para pantallas chicas */
+@media (max-width: 768px) {
+  .compartir {
+    justify-content: flex-start; /* Íconos alineados a la izquierda en móviles */
+    flex-wrap: wrap;             /* Permite que pasen a otra fila si no entran */
+  }
+
+  .compartir a {
+    font-size: 1.1em;
+  }
+}
+

@@ -1,0 +1,173 @@
+/* Estilos para OWASP Top 10 */
+.side-imagen {
+  width: 100px;
+  height: auto;
+  float: left;  
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  
+}
+.side-imagen:hover {
+  transform: scale(1.05); /* Efecto de escala al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Remarcar los títulos */
+.h4-owasp {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+/*Agregar viñetas a los títulos */
+.h4-owasp::before {
+  content: "• ";
+  color: #ff6600; /* Color de la viñeta */
+  font-size: 1.2em;
+}
+
+/* Los contenedores */
+.content-item {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Estilo adicional en negrita */
+.negrita {
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .side-imagen {
+    width: 80px; /* Ajusta el tamaño de imagen  */
+    margin-right: 10px; /* Reduce el margen  */
+  }
+
+  .h4-owasp {
+    font-size: 1.2em; /* Ajusta el tamaño de fuente  */
+    margin-bottom: 8px; /* Ajusta el margen inferior  */
+  }
+
+  .h4-owasp::before {
+    font-size: 1em; /* Ajusta el  tamaño de la viñeta */
+  }
+
+  .content-item {
+    margin-bottom: 15px; /* Ajusta del margen inferior */
+  }
+}
+
+@media (max-width: 480px) {
+  .side-imagen {
+    width: 50px;
+    margin-right: 5px;
+  }
+
+  .h4-owasp {
+    font-size: 1em; /* Ajusto el tamaño de fuente  */
+    margin-bottom: 5px; /* Ajusto el margen inferior */
+  }
+
+  .h4-owasp::before {
+    font-size: 0.8em; /* Ajusto el tamaño de la viñeta */
+  }
+
+  .content-item {
+    margin-bottom: 10px; /* Ajusto el margen inferior  */
+  }
+}
+
+/*Estilos para las imagenes de Cifrado de datos*/
+.section-contentt {
+  padding: 20px;
+}
+
+.section-contentt h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.section-contentt p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.content-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.side-imagenes {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+  
+}
+
+@media (max-width: 768px) {
+  .content-imagenes {
+      flex-direction: column;
+  }
+
+  .side-imagenes {
+      margin-right: 0;
+      margin-bottom: 15px;
+  }
+}
+
+/*Agregar viñetas a Contraseñas de seguridad*/
+
+/* Estilo para viñetas verdes */
+.viñetas-verdes {
+  position: relative;
+  list-style: none;
+  padding-left: 25px; /* Ajusto el espacio para el punto este más grande */
+}
+
+.viñetas-verdes::before {
+  content: '•'; /* Establece el punto de la viñeta */
+  color: green; /* Color del punto */
+  font-size: 1.5em; /* Tamaño del punto */
+  position: absolute;
+  left: 0;
+  top: 50%; /* Centra verticalmente el punto */
+  transform: translateY(-50%); /* Asegura que el punto esté centrado */
+}
+
+/* Estilo para viñetas rojas */
+.viñetas-rojas {
+  position: relative;
+  list-style: none;
+  padding-left: 25px; /* Ajusta el espacio para el punto este más grande */
+}
+
+.viñetas-rojas::before {
+  content: '•'; /* establece el punto de la viñeta */
+  color: red; /* Color del punto */
+  font-size: 1.5em; /* Tamaño del punto */
+  position: absolute;
+  left: 0;
+  top: 50%; /* Centra verticalmente el punto */
+  transform: translateY(-50%); /*  centra el punto */
+}
+
+/* Estilos para los números de Verificación en dos pasos*/
+ol {
+  list-style-type: none; /* Elimina el estilo de lista predeterminado */
+  counter-reset: list-counter; /* Inicializa el contador */
+}
+
+ol li {
+  counter-increment: list-counter; /* Incrementa el contador */
+  position: relative; /* Permite el uso de '::before' */
+}
+
+ol li::before {
+  content: counter(list-counter) ". "; /* Muestra el número seguido de un punto */
+  color: green;; /* Cambia el color del número  */
+  position: absolute; /* Posiciona el número */
+  left: -2em; /* Ajusta la posición horizontal según sea necesario */
+}

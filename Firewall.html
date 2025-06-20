@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+      
+      <div id="nav"></div>
+
+    <main>
+        <div class="main-container">
+            
+            <section class="section-content">
+                <h2>Firewall</h2>
+                <h3>Defendiendo tus redes: la primera línea de protección contra amenaza</h3>
+                <div id="compartir"></div>
+                <div class="content-image">
+                <img src="Imagenes/firewalls.jpg" alt="imagen" class="side-image">
+                    <p>Un firewall es un dispositivo que puede ser un software o hardware o una combinación de ambos, que se encarga de monitorear el tráfico de datos entrante y saliente entre una red segura de otra que no lo es, lo cual permite bloquear datos según reglas predefinidas. Este dispositivo funciona como una pared y evita la instrucción de usuario no autorizados que pueden dañar el sistema. </p> 
+                    <p>El firewall es una herramienta esencial para garantizar la seguridad de los dispositivos conectados a una red interna o privada, ya que se encarga de protegerlos de accesos no autorizados y de solicitudes maliciosas. Su función principal consiste en supervisar y filtrar todos los datos e intentos de acceso, dividiéndolos en dos categorías: aquellos que cumplen con los criterios de seguridad establecidos y se les permite el paso, y aquellos que no cumplen con dichos criterios y son bloqueados. Además, el firewall ayuda a prevenir ataques cibernéticos y a mantener la integridad de la red.</p>        
+           
+
+
+<p>El firewall cumple diversas funciones y elementos clave para garantizar la seguridad de la red y de los dispositivos conectados:</p>
+
+
+<ul>
+    <li>Supervisa tanto la comunicación entrante como saliente de los equipos conectados a la red o a internet.</li>
+    <li>Algunos fabricantes de firewall permiten detectar y bloquear el acceso de usuarios no autorizados a la red interna.</li>
+    <li>Bloquea el tráfico de red relacionado con aplicaciones sospechosas o maliciosas.</li>
+    <li>Advierte sobre intentos de conexión desde dispositivos desconocidos.</li>
+    <li>Impide la entrada de ciertos tipos de malware desde la red.</li>
+    <li>Se adapta a los cambios y avances en los ataques cibernéticos para mantener la seguridad de la red.</li>
+</ul>
+
+<h4>Limitaciones del firewall:</h4>
+<ul>
+    <li>No protege contra vulnerabilidades que no provengan del tráfico de red, como dispositivos USB contaminados.</li>
+    <li>Puede generar una falsa sensación de seguridad al no garantizar la protección absoluta de los dispositivos.</li>
+    <li>No todos los ciberataques necesitan atravesar el firewall para alcanzar su objetivo.</li>
+    <li>Es recomendable contar con más de una línea de defensa para complementar la protección proporcionada por el firewall.</li>
+    <li>Es importante asesorarse con expertos.</li>
+</ul>
+
+<p><strong>En el mercado actual, existen varios tipos de firewall que ofrecen diferentes niveles de seguridad y funcionalidades para proteger las redes. A continuación, se describen cinco tipos comunes de firewall:</strong></p>
+<p><strong>Cortafuegos de filtrado de paquetes:</strong> Este tipo de firewall toma decisiones de procesamiento basadas en direcciones de red, puertos o protocolos. Aunque son rápidos, no realizan inspección interna del tráfico y pueden considerarse menos seguros debido a la falta de lógica detrás de las decisiones que toman.</p>
+<p><strong>Puerta de enlace a nivel de circuito: </strong>Opera en la capa de transporte y realiza filtrado a nivel de circuito en lugar de a nivel de paquete. Verifica la validez de las conexiones antes de permitir la apertura de sesiones, pero puede carecer de filtrado de contenido y requerir modificaciones de software relacionadas con la función de transporte.</p>
+<p><strong>Firewall de inspección con estado:</strong> Capaz de realizar un seguimiento del estado de la conexión, este tipo de firewall puede abrir y cerrar puertos dinámicamente para completar transacciones. Considerados más seguros que los de filtrado de paquetes, ya que procesan datos de la capa de aplicación para comprender mejor las transacciones.</p>
+<p><strong>Puerta de enlace de nivel de aplicación (Firewall Proxy):</strong> Opera en la capa de aplicación del modelo OSI y filtra el acceso según las definiciones de la aplicación. Considerado uno de los firewalls más seguros, inspecciona paquetes para garantizar que cumplan con las especificaciones de la aplicación, aunque puede ser un poco más lento debido al procesamiento adicional.</p>
+<p><strong>  Firewall de próxima generación:</strong> Ofrece un filtrado de paquetes básico y toma decisiones en capas superiores del modelo OSI, como la capa de aplicación. Incluye funciones avanzadas como identificación y control de aplicaciones, autenticación basada en el usuario, protección contra malware y exploits, filtrado de contenido y control de acceso basado en la ubicación.</p>
+<ul>
+</div>
+           </section>
+          
+           <section class="section-content">
+            <h3>Tipos y Funcionalidades</h3>
+            <table class="comparativo-tabla">
+                <thead>
+                    <tr>
+                        <th>Tipo de Firewall</th>
+                        <th>Características</th>
+                        <th>Usos previstos</th>
+                        <th>Ventajas</th>
+                        <th>Desventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-color">Filtrado de Paquetes</td>
+                        <td>Toma decisiones basadas en direcciones de red, puertos o protocolos.</td>
+                        <td>Ideal para redes pequeñas o domésticas. Protege de amenazas comunes.</td>
+                        <td>Rápido en el procesamiento.</td>
+                        <td>Menos seguro debido a la falta de inspección interna.</td>
+                    </tr>
+                    <tr>
+                        <td class="td-color">Puerta de Enlace a Nivel de Circuito</td>
+                        <td>Realiza filtrado a nivel de circuito en la capa de transporte.</td>
+                        <td>Puede ser útil en redes empresariales donde se requiere un mayor control sobre el tráfico de red.</td>
+                        <td>Verifica la validez de las conexiones antes y después de las sesiones.</td>
+                        <td>Puede decaer el rendimiento y ser vulnerable a modificaciones de software.</td>
+                    </tr>
+                    <tr>
+                        <td class="td-color">Inspección con Estado</td>
+                        <td>Realiza un seguimiento del estado de la conexión y puede abrir/cerrar puertos dinámicamente.</td>
+                        <td>Ideal para redes empresariales que necesitan una protección avanzada contra ataques cibernéticos.</td>
+                        <td>Más seguro que el filtrado de paquetes al procesar datos de la capa de aplicación.</td>
+                        <td>Puede ser más complejo y requiere más recursos.</td>
+                    </tr>
+                    <tr>
+                        <td class="td-color">Puerta de Enlace de Nivel de Aplicación</td>
+                        <td>Filtra el acceso según las definiciones de la aplicación en la capa de aplicación.</td>
+                        <td>Es útil en entornos donde se manejan datos sensibles o críticos que requieren una protección más específica.</td>
+                        <td>Considerado uno de los más seguros al inspeccionar paquetes y garantizar su cumplimiento.</td>
+                        <td>Puede ser más lento debido al nivel de inspección.</td>
+                    </tr>
+                    <tr>
+                        <td class="td-color">Firewall de Próxima Generación</td>
+                        <td>Ofrece filtrado de paquetes básico y toma decisiones en capas superiores del modelo OSI.</td>
+                        <td>Es ideal para entornos empresariales que necesitan una protección completa y actualizada contra las amenazas más recientes.</td>
+                        <td>Incluye funciones avanzadas como identificación de aplicaciones y protección contra malware.</td>
+                        <td>Puede ser más costoso y complejo de implementar.</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+          
+                <div class="comparativo-tarjetas">
+                    <div class="tarjetas">
+                        <div class="tarjetas-header">Filtrado de Paquetes</div>
+                        <div class="tarjetas-body">
+                            <p><strong>Decisiones basadas en:</strong> Direcciones de red, puertos o protocolos.</p>
+                            <p><strong>Utilidad:</strong> Ideal para redes pequeñas o domésticas. Protege de amenazas comunes.</p>
+                            <p><strong>Velocidad:</strong> Rápido en el procesamiento.</p>
+                            <p><strong>Seguridad:</strong> Menos seguro debido a la falta de inspección interna.</p>
+                        </div>
+                    </div>
+                    <div class="tarjetas">
+                        <div class="tarjetas-header">Puerta de Enlace a Nivel de Circuito</div>
+                        <div class="tarjetas-body">
+                            <p><strong>Filtrado a nivel de:</strong> Circuito en la capa de transporte.</p>
+                            <p><strong>Utilidad:</strong> Puede ser útil en redes empresariales donde se requiere un mayor control sobre el tráfico de red.</p>
+                            <p><strong>Verificación:</strong> Verifica la validez de las conexiones antes y después de las sesiones.</p>
+                            <p><strong>Desventajas:</strong> Puede decaer el rendimiento y ser vulnerable a modificaciones de software.</p>
+                        </div>
+                    </div>
+                    <div class="tarjetas">
+                        <div class="tarjetas-header">Inspección con Estado</div>
+                        <div class="tarjetas-body">
+                            <p><strong>Seguimiento del estado:</strong> Realiza un seguimiento del estado de la conexión y puede abrir/cerrar puertos dinámicamente.</p>
+                            <p><strong>Utilidad:</strong> Ideal para redes empresariales que necesitan una protección avanzada contra ataques cibernéticos.</p>
+                            <p><strong>Seguridad:</strong> Más seguro que el filtrado de paquetes al procesar datos de la capa de aplicación.</p>
+                            <p><strong>Desventajas:</strong> Puede ser más complejo y requiere más recursos.</p>
+                        </div>
+                    </div>
+                    <div class="tarjetas">
+                        <div class="tarjetas-header">Puerta de Enlace de Nivel de Aplicación</div>
+                        <div class="tarjetas-body">
+                            <p><strong>Filtrado según:</strong> Definiciones de la aplicación en la capa de aplicación.</p>
+                            <p><strong>Utilidad:</strong> Es útil en entornos donde se manejan datos sensibles o críticos que requieren una protección más específica.</p>
+                            <p><strong>Seguridad:</strong> Considerado uno de los más seguros al inspeccionar paquetes y garantizar su cumplimiento.</p>
+                            <p><strong>Desventajas:</strong> Puede ser más lento debido al nivel de inspección.</p>
+                        </div>
+                    </div>
+                    <div class="tarjetas">
+                        <div class="tarjetas-header">Firewall de Próxima Generación</div>
+                        <div class="tarjetas-body">
+                            <p><strong>Características:</strong> Ofrece filtrado de paquetes básico y toma decisiones en capas superiores del modelo OSI.</p>
+                            <p><strong>Utilidad:</strong> Es ideal para entornos empresariales que necesitan una protección completa y actualizada contra las amenazas más recientes.</p>
+                            <p><strong>Funciones avanzadas:</strong> Incluye identificación de aplicaciones y protección contra malware.</p>
+                            <p><strong>Desventajas:</strong> Puede ser más costoso y complejo de implementar.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       
+    </div>
+    </main>
+    
+    <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+<script src="js/compartir.js" defer></script>
+</body>
+</html>

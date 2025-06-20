@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="js/loadComponents.js" defer></script>
+   
+</head>
+    <body>
+      
+      <div id="nav"></div>
+  
+         <main>
+            <div class="main-container">
+            
+        <section class="section-content">
+           <h2>Cross-site scripting (XSS)   </h2>
+           <h3>Entendiendo los riesgos y las soluciones</h3>
+           <div id="compartir"></div>
+           <div class="content-image">
+            <img src="Imagenes/XSS.webp" alt="Imagen" class="side-image">
+            <p> <strong> Cross-site scripting(XSS)</strong> es una de las vulnerabilidades más comunes en aplicaciones web. Se trata de un ataque en el que un atacante inserta código malicioso (como JavaScript, HTML, u otro código ejecutable) en páginas web visitadas por otros usuarios. Este código puede ejecutarse en el navegador de la víctima y realizar acciones no autorizadas, como robar credenciales de inicio de sesión, obtener información confidencial o redirigir a sitios maliciosos.</p>
+           <H4>¿Cómo ocurre el XSS?</H4> 
+           <p>Las vulnerabilidades de XSS suelen ocurrir cuando una aplicación web no valida o filtra correctamente el contenido que los usuarios introducen, permitiendo que scripts no deseados se ejecuten en el contexto de la página. </p>
+           <h4>Tipos de ataques XSS</h4>
+           <p>Los ataques XSS se pueden clasificar en tres categorías: almacenados, reflejados y basados en DOM. Cada uno tiene sus propias características y formas de impactar la seguridad de un sitio web.</p>
+           <ul>
+            <li> <strong>Almacenados (Persistentes):</strong> Los ataques XSS almacenados se producen cuando los datos maliciosos inyectados por un atacante se guardan en el servidor y se muestran a múltiples usuarios en diferentes sesiones.
+            <strong> Ejemplo: </strong>Un atacante inserta un script malicioso en un campo de comentarios de un sitio web. Este script se guarda en la base de datos y se ejecuta en los navegadores de los usuarios que ven ese comentario.</li>
+            
+            <li> <strong>Reflejados(No persistentes):  </strong>Los ataques XSS reflejados ocurren cuando los datos maliciosos inyectados no se almacenan en el servidor, sino que se reflejan directamente en la respuesta enviada al usuario. <strong>Ejemplo:</strong>Un atacante envía un enlace malicioso que contiene un script, y cuando la víctima hace clic en el enlace, el script se ejecuta en su navegador.</li>
+            
+            <li><strong>Basados en DOM:</strong>Los ataques XSS basados en DOM se producen cuando el script malicioso manipula el Document Object Model (DOM) de la página web para ejecutar acciones no deseadas.<strong>Ejemplo:</strong>El código malicioso interactúa con el DOM de la página web en tiempo de ejecución, aprovechando las vulnerabilidades en el cliente.</li>
+           </ul>
+
+           <h3>Ejemplo de Vulnerabilidad en Campo de Búsqueda</h3>
+           <p>Un campo de búsqueda sin filtrar puede ser vulnerable a ataques de inyección de código, como XSS. Un atacante puede insertar código malicioso, como scripts de JavaScript, que luego se ejecutan en el navegador del usuario que ve los resultados de la búsqueda.</p>
+           <p>Supongamos que un ciberdelincuente descubre que el sitio web de un banco ficticio, www.banco.com, es vulnerable a un ataque de XSS en un campo de búsqueda sin filtrar. El atacante decide aprovechar esta vulnerabilidad para engañar a los usuarios e intentar robar sus credenciales bancarias.</p>
+           <p>El atacante envía este enlace “www.banco.com/ok” a las posibles víctimas a través de mensajes de correo electrónico, redes sociales o sitios web comprometidos. Cuando un usuario desprevenido hace clic en el enlace, el código malicioso se ejecuta en el contexto del sitio web del banco, (puede ser un script que tenga como función enviar datos) lo que permite al atacante robar cookies de sesión y posiblemente otras credenciales almacenadas en el navegador de la víctima.</p>
+           <p>Los ataques de XSS suelen ocurrir cuando la entrada de datos no confiable se integra en una aplicación web sin un adecuado filtrado o escapado, lo que permite a los atacantes inyectar y ejecutar scripts maliciosos en el contexto de otro usuario. Para prevenir este tipo de ataques, es crucial implementar medidas de seguridad como la validación de entrada de datos, la sanitización de salida y el uso de encabezados de seguridad en las aplicaciones web.</p>
+
+           <h3>Medidas de Protección contra XSS</h3>
+           <h4>Encabezados HTTP</h4>
+           <ul>
+            <li><strong> Content Security Policy (CSP):</strong> Sus siglas en inglés significan "Política de seguridad de los contenidos".Utilizar directivas de CSP para controlar qué recursos pueden cargarse en tu aplicación web y así reducir la exposición a ataques XSS.</li>
+            <li><strong>X-XSS-Protección:</strong>Habilitar el filtro XSS integrado en los navegadores para bloquear ataques de script cross-site</li>
+            <li><strong>X-Content-Type-Options</strong>Envía el encabezado X-Content-Type-Options con el valor "nosniff" para evitar que los navegadores intenten adivinar el tipo de contenido de un recurso, lo que puede prevenir ciertos ataques XSS.</li>
+           </ul>
+           
+           <h4>Construcción del Código</h4>
+           <ul>
+            <li><strong>Escape de datos:</strong>Utilizar funciones de escape apropiadas, como htmlspecialchars en PHP, al mostrar datos de entrada de usuarios en la interfaz de usuario para evitar que se interpreten como código HTML o JavaScript.</li>
+            <li><strong>Validación de datos</strong>Validar y filtrar cuidadosamente los datos ingresados por los usuarios para asegurarse de que cumplan con un formato esperado y no contengan caracteres maliciosos</li>
+            <li><strong>Sanitización de entrada: </strong>Implementar un proceso de sanitización de entrada para filtrar y eliminar contenido potencialmente malicioso de las solicitudes de usuario antes de mostrarlo en la interfaz de usuario.</li>
+           </ul>
+          <h4>Medidas de seguridad para los usuarios:</h4>
+           <li><strong>Educación y concientización: </strong>: Educar a los usuarios sobre buenas prácticas de seguridad en línea, como no hacer clic en enlaces sospechosos o descargar archivos de fuentes desconocidas para evitar ataques de XSS.</li>
+           <li><strong>Mantener los navegadores actualizados: </strong>Asegurarse de que los usuarios utilicen la última versión de su navegador web, ya que las actualizaciones suelen incluir parches de seguridad que pueden proteger contra vulnerabilidades conocidas.</li>
+         </div>
+       </section>    
+        
+       </main>
+
+       <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>     
+  <script src="js/botton.js" defer></script>
+  <script src="js/compartir.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
